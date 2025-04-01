@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+
+  width: device-width;
+  height: device-height;  
+}
+body{
+  margin: 0 auto;
+
+  background-color: #0D0B0A;
+  color: #E5B059;
+
+  border: solid 2px #fefefe;
+
+  width : 96%;
+}
+
+/*반응형 */
