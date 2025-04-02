@@ -110,7 +110,7 @@ hr {
 
     position: fixed;  /* 화면에 고정 */
     top: 0;
-    left: 95%;  /* 화면의 가운데 정렬 */
+    left: 90%;  /* 화면의 가운데 정렬 */
     transform: translateX(-50%);  /* 정확한 중앙 정렬 */
 }
 
