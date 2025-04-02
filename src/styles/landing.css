@@ -17,13 +17,15 @@
     left: 50%;
     transform: translate(-50%, -50%); /* 정확히 중앙으로 이동 */
     text-align: center;
-    width: 20vw;
+    width: 40vw;
 }
 
 #title>h1{
     font-size: 3.2rem;
     font-family: 'Diphylleia-Regular';
     font-weight: lighter;
+
+    border: solid 2px red;
 }
 
 .left{
