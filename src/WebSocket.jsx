@@ -1,5 +1,15 @@
 import { useEffect, useState } from "react";
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
+import { createClient } from '@supabase/supabase-js';
+
+// Supabase 클라이언트 설정
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+console.log("Supabase URL:", import.meta.env.VITE_SUPABASE_URL);
+console.log("Supabase Key:", import.meta.env.VITE_SUPABASE_KEY);
+
 
 const WEBSOCKET_URL = import.meta.env.VITE_WEBSOCKET_URL;
 
@@ -17,11 +27,19 @@ function WebSocketTest() {
     const socket = new WebSocket(WEBSOCKET_URL);
     setWS(socket);
 
-    socket.onopen = () => {
+    socket.onopen = async () => {
       console.log("WebSocket 연결 성공");
-      const ID = crypto.randomUUID();
-      socket.send(JSON.stringify({ UUID: ID }));
       setStatus("Connected");
+
+      const useruuid = uuidv4();
+
+      try {
+        const { error } = await supabase.from('memoryoflibrary').insert([{ "ID" : useruuid }]);
+        if (error) throw error;
+        console.log("Supabase에 UUID 저장 성공:", useruuid);
+      } catch (error) {
+        console.error("Supabase error during insert:", error);
+      }
     };
 
     socket.onmessage = (event) => {
@@ -45,6 +63,17 @@ function WebSocketTest() {
       }
     };
   }, []);
+
+  return (
+    <div>
+      <h2>WebSocket 상태: {status}</h2>
+      <ul>
+        {messages.map((msg, index) => (
+          <li key={index}>{msg}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default WebSocketTest;
