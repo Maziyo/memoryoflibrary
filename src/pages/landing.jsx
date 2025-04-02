@@ -1,4 +1,4 @@
-import "../App.css";
+import "../styles/landing.css";
 import { useNavigate } from "react-router-dom";
 
 function Landing(){
@@ -10,8 +10,9 @@ function Landing(){
     };
 
     return(
-        <div onClick={handleClick}>
-            <h1>LandingPage</h1>
+        <div id="title">
+            <h1 className="left">기억의</h1>
+            <h1 className="right">도서관</h1>
         </div>
     );
 }

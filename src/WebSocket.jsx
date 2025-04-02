@@ -64,16 +64,16 @@ function WebSocketTest() {
     };
   }, []);
 
-  return (
-    <div>
-      <h2>WebSocket 상태: {status}</h2>
-      <ul>
-        {messages.map((msg, index) => (
-          <li key={index}>{msg}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  // return (
+  //   <div>
+  //     <h2>WebSocket 상태: {status}</h2>
+  //     <ul>
+  //       {messages.map((msg, index) => (
+  //         <li key={index}>{msg}</li>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
 }
 
 export default WebSocketTest;

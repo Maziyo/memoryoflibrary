@@ -1,21 +1,24 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "dist/**/*",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-     {
-        "src": "/assets/(.*)",
-        "headers": { "Content-Type": "application/javascript" },
-        "dest": "/dist/assets/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "dist/index.html"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+   {
+      "src": "/assets/(.*)",
+      "dest": "/dist/assets/$1"
+    },
+    {
+      "src": "/(.*\\.css)",
+      "headers": { "Content-Type": "text/css" },
+      "dest": "/dist/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/index.html"
+    }
+  ]
+}
