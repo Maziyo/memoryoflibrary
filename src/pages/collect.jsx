@@ -11,7 +11,7 @@ function Collect() {
 
     return (
         <>
-            <hr class="vertical-hr"></hr>
+            <hr className="vertical-hr"></hr>
             <div id="main">
                 <div className="main01">
                     <div id="main01-con">

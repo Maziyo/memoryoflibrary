@@ -34,17 +34,35 @@ function WebSocketTest() {
     setWS(socket);
 
     socket.onopen = async () => {
-      console.log("WebSocket 연결 성공" , userUUID);
+      console.log("WebSocket 연결 성공", userUUID);
       setStatus("Connected");
 
-      
 
-      try {
-        const { error } = await supabase.from('memoryoflibrary').insert([{ "ID" : userUUID }]);
-        if (error) throw error;
-        console.log("Supabase에 UUID 저장 성공:", useruuid);
-      } catch (error) {
-        console.error("Supabase error during insert:", error);
+      // ✅ 먼저 중복 체크
+      const { data: existingUser, error: fetchError } = await supabase
+        .from("memoryoflibrary")
+        .select("ID")
+        .eq("ID", userUUID)
+        .single(); // 단일 레코드 확인
+
+      if (fetchError) {
+        console.error("Error fetching user:", fetchError);
+        return;
+      }
+
+      if (!existingUser) {
+        // ✅ 중복이 없으면 데이터 삽입
+        const { error: insertError } = await supabase.from("memoryoflibrary").insert([
+          { ID: userUUID, other_column: "value" }
+        ]);
+
+        if (insertError) {
+          console.error("Supabase insert error:", insertError);
+        } else {
+          console.log("User inserted successfully!");
+        }
+      } else {
+        console.log("User already exists, skipping insert.");
       }
     };
 
