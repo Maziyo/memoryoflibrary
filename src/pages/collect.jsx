@@ -11,6 +11,7 @@ function Collect() {
 
     return (
         <>
+            <hr class="vertical-hr"></hr>
             <div id="main">
                 <div className="main01">
                     <div id="main01-con">
@@ -18,7 +19,7 @@ function Collect() {
                         <h1 className="question">가장 기억에 남는<br />선택의 순간은<br />언제인가요?</h1>
                     </div>
                 </div>
-
+                <hr />
                 <div id="main02">
                     <textarea
                         className="userInput"
