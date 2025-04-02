@@ -15,7 +15,7 @@ function Collect() {
             <div id="main">
                 <div className="main01">
                     <div id="main01-con">
-                        <p className="recording">기록하기</p>
+                        <p className="recording">기억의 도서관</p>
                         <h1 className="question">가장 기억에 남는<br />선택의 순간은<br />언제인가요?</h1>
                     </div>
                 </div>
