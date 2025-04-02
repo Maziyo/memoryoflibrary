@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import WebSocketTest from "./WebSocket.jsx";
 
+
 import Landing from "./pages/landing.jsx";
 import Collect from "./pages/collect.jsx";
 import Firstend from "./pages/firstend.jsx";

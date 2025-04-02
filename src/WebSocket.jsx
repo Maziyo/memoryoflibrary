@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {v4 as uuidv4} from 'uuid';
 
 const WEBSOCKET_URL = import.meta.env.VITE_WEBSOCKET_URL;
 
@@ -18,7 +19,8 @@ function WebSocketTest() {
 
     socket.onopen = () => {
       console.log("WebSocket 연결 성공");
-      socket.send(JSON.stringify({ message: "WEB" }));
+      const ID = crypto.randomUUID();
+      socket.send(JSON.stringify({ UUID: ID }));
       setStatus("Connected");
     };
 
