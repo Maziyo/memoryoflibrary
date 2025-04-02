@@ -12,61 +12,61 @@
     font-style: normal;
 }
 
+/* 기본 스타일 초기화 */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* 스크롤 방지 */
+    box-sizing: border-box;
+}
 
-.main{
-    width: 100vh;
+.main {
+    width: 100vw; /* 화면 너비에 맞춤 */
     height: 80vh;
-
     display: flex;
     justify-content: space-between;
 }
 
-#main-context{
+#main-context {
     border: solid 1px #4B4B4B;
-    width: 80vh;
+    width: 80vw; /* 화면 비율에 맞춰 변경 */
     height: 100%;
-
     display: flex;
     flex-direction: column;
 }
 
-.recording{
+.recording {
     margin-top: 5vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    padding-left: 4vh;
-
+    padding: 2vh 0 2vh 4vh;
     color: #A3A3A3;
-
     border: solid 1px orange;
 }
-.question{
-    padding: 4vh;
 
+.question {
+    padding: 4vh;
     color: #E6BA73;
     font-family: 'Diphylleia-Regular';
     font-weight: lighter;
-
     border: solid 1px orange;
 }
 
-.userInput{
+.userInput {
     padding: 4vh;
     background-color: transparent;
-
     width: 100%;
-    height: 100%;
+    flex-grow: 1;
     box-sizing: border-box;
-    height: auto; /* 내용에 맞게 자동 조절 */
-    flex-grow: 1; /* 남은 공간을 채우되, 넘지 않도록 */
-
     color: #B1B1B1;
     font-family: 'Pretendard-Regular';
     font-size: 1.6rem;
+    border: none;
+    outline: none;
+    resize: none;
 }
 
-
-#book-spine{
+#book-spine {
     border: solid 1px #4B4B4B;
-    width: 20vh;
+    width: 20vw; /* 비율 조정 */
 }
