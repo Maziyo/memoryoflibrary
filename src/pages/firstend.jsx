@@ -6,15 +6,7 @@ function Firstend() {
     return (
         <>
             <div>
-                <h1>01</h1>
-            </div>
-            <div>
-                <h1>02</h1>
-            </div>
-            <div>
-                <form action="">
-                    <button>기록하기</button>
-                </form>
+            <h1>제출 후</h1>
             </div>
 
         </>
