@@ -40,7 +40,7 @@ function WebSocketTest() {
       
 
       try {
-        const { error } = await supabase.from('memoryoflibrary').insert([{ "ID" : useruuid }]);
+        const { error } = await supabase.from('memoryoflibrary').insert([{ "ID" : userUUID }]);
         if (error) throw error;
         console.log("Supabase에 UUID 저장 성공:", useruuid);
       } catch (error) {
