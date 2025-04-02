@@ -6,6 +6,8 @@ import WebSocketTest from "./WebSocket.jsx";
 import Landing from "./pages/landing.jsx";
 import Collect from "./pages/collect.jsx";
 import Firstend from "./pages/firstend.jsx";
+import Genre from "./pages/genre.jsx";
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/collect" element={<Collect />} />
         <Route path="/firstend" element={<Firstend />} />
+        <Route path="/genre" element={<Genre />} />
       </Routes>
       <WebSocketTest />
     </BrowserRouter>

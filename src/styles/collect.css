@@ -12,61 +12,91 @@
     font-style: normal;
 }
 
-/* 기본 스타일 초기화 */
-html, body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* 기본 스타일 초기화 */
+html,
+body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden; /* 스크롤 방지 */
-    box-sizing: border-box;
+    overflow: hidden;
+    /* 스크롤 방지 */
 }
 
 .main {
-    width: 100vw; /* 화면 너비에 맞춤 */
-    height: 80vh;
+    border: solid 2px orange;
+
+    width: 100%;
+    height: 85vh;
+}
+
+.main01 {
+    border: solid 2px red;
+    width: 100%;
+    height: 30vh;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    /* 내부 요소 위치 조정 가능하게 설정 */
 }
 
-#main-context {
-    border: solid 1px #4B4B4B;
-    width: 80vw; /* 화면 비율에 맞춰 변경 */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.main01-left {
+    border: solid 2px rgb(0, 255, 119);
+    /* 왼쪽 90% */
 }
 
-.recording {
-    margin-top: 2vh;
-    padding: 2vh 0 2vh 4vh;
-    color: #A3A3A3;
-    border: solid 1px orange;
-}
-
-.question {
-    padding: 4vh;
+.main01-right {
+    width: 28vh;
+    padding-left: 2vh;
+    border: solid 2px rgb(0, 255, 119);
+    transform: rotate(90deg);
+    transform-origin: left bottom;
+    white-space: nowrap;
+    font-size: 1.2rem;
     color: #E6BA73;
-    font-family: 'Diphylleia-Regular';
-    font-weight: lighter;
-    border: solid 1px orange;
-}
-
-.userInput {
-    padding: 4vh;
-    background-color: transparent;
-    width: 100%;
-    flex-grow: 1;
-    box-sizing: border-box;
-    color: #B1B1B1;
     font-family: 'Pretendard-Regular';
-    font-size: 1.6rem;
-    border: none;
-    outline: none;
-    resize: none;
+
+
 }
 
-#book-spine {
-    border: solid 1px #4B4B4B;
-    width: 20vw; /* 비율 조정 */
+
+
+
+
+#month {
+    font-family: 'Pretendard-Regular';
+    writing-mode: vertical-rl;
+}
+
+.btn {
+    border: solid 2px orange;
+
+    width: 100%;
+    height: 15vh;
+}
+
+.btn form {
+    width: 100%;
+    height: 100%;
+}
+
+.btn form button {
+    width: 100%;
+    height: 100%;
+
+    background-color: #2E2E2E;
+    border: solid 2px #4B4B4B;
+
+    color: #AEABAB;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.8rem;
+
+
+    cursor: pointer;
 }
