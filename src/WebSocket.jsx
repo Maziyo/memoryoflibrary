@@ -38,23 +38,30 @@ function WebSocketTest() {
       setStatus("Connected");
 
 
-      // ✅ 먼저 중복 체크
       const { data: existingUser, error: fetchError } = await supabase
         .from("memoryoflibrary")
         .select("ID")
         .eq("ID", userUUID)
-        .single(); // 단일 레코드 확인
+        .maybeSingle(); // 단일 레코드 확인
 
       if (fetchError) {
         console.error("Error fetching user:", fetchError);
         return;
       }
 
+      // ✅ userUUID가 올바르게 존재하는지 먼저 확인
+      if (!userUUID) {
+        console.error("Invalid user UUID:", userUUID);
+        return;
+      }
+
       if (!existingUser) {
+        console.log("User does not exist, inserting new record...");
+
         // ✅ 중복이 없으면 데이터 삽입
-        const { error: insertError } = await supabase.from("memoryoflibrary").insert([
-          { ID: userUUID, other_column: "value" }
-        ]);
+        const { error: insertError } = await supabase
+          .from("memoryoflibrary")
+          .insert([{ ID: userUUID}]);
 
         if (insertError) {
           console.error("Supabase insert error:", insertError);
