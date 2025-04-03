@@ -9,6 +9,8 @@ import NameInput from "./pages/name.jsx";
 import Collect from "./pages/collect.jsx";
 import Firstend from "./pages/firstend.jsx";
 import Genre from "./pages/genre.jsx";
+import Writestyle from "./pages/writestyle.jsx";
+import EndPage from "./pages/end.jsx";
 
 const userUUID = getOrCreateUUID();
 console.log("User UUID:", userUUID);
@@ -22,6 +24,8 @@ function App() {
         <Route path="/collect" element={<Collect />} />
         <Route path="/firstend" element={<Firstend />} />
         <Route path="/genre" element={<Genre />} />
+        <Route path="/writestyle" element={<Writestyle />} />
+        <Route path="/end" element={<EndPage />} />
       </Routes>
       <WebSocketTest />
     </BrowserRouter>

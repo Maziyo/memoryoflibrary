@@ -76,7 +76,7 @@ hr {
     justify-content: center;
     /* 가로 중앙 정렬 */
 
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: 'Diphylleia-Regular';
     color: #E6BA73;
     font-weight: lighter;
@@ -104,7 +104,7 @@ hr {
     background-color: transparent;
     color: #CDCDCD;
     font-family: 'Pretendard-Regular';
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
     outline: none;
     resize: none;
@@ -115,7 +115,7 @@ hr {
 .userInput::placeholder {
     color: #5A5A5A;
     font-family: 'Pretendard-Regular';
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2.2rem;
     outline: none;
 }

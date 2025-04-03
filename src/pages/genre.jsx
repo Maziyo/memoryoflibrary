@@ -19,7 +19,7 @@ function Genre() {
         setFade("fade-out");
 
         setTimeout(() => {
-            navigate("/");
+            navigate("/writestyle");
         }, 1000);
     };
 
