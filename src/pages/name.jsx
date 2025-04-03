@@ -3,6 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import websocketService from "../WebSocketService.js";
 
+let initialHeight = window.innerHeight;
+
+window.addEventListener("resize", () => {
+    if (window.innerHeight >= initialHeight) {
+        document.body.style.height = `${initialHeight}px`;
+    }
+});
+
+
 function NameInput() {
     const navigate = useNavigate();
     const [inputValue, setInputValue] = useState("");
