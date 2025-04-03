@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Diphylleia-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;  /* 가로 중앙 정렬 */
+    align-items: center;      /* 세로 중앙 정렬 */
+    height: 100vh;            /* 화면 전체 높이 사용 */
+}
+
+img {
+    width: 20vw;
+    height: 20vw;
+
+    padding-bottom: 4vh;
+}
+
+#ment {
+    padding-bottom: 10vh;
+
+    font-family: 'Diphylleia-Regular';
+    font-size: 1.4rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    text-align: center;
+}

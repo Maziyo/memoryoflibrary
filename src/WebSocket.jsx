@@ -89,4 +89,4 @@ function WebSocketTest() {
   }, []);
 }
 
-export default WebSocketTest;
+export default WebSocketTest
