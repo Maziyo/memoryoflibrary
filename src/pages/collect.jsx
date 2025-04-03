@@ -27,11 +27,12 @@ function Collect() {
     const navigate = useNavigate();
     const [inputValue, setInputValue] = useState("");
     const [question, setQuestion] = useState("");
+    const [fade, setFade] = useState("fade-in");
 
     useEffect(() => {
         // 컴포넌트가 처음 렌더링될 때만 실행
         setQuestion(QUESTIONS[Math.floor(Math.random() * QUESTIONS.length)]);
-    }, []); // 빈 배열을 넣어 한 번만 실행
+    }, []);
 
     const userUUID = localStorage.getItem("ID");
 
@@ -40,12 +41,18 @@ function Collect() {
         if (inputValue.trim()) {
             websocketService.sendMessage(JSON.stringify({ ID: userUUID, memory: inputValue })); // ✅ WebSocket 메시지 전송
             console.log(inputValue);
-            navigate("/firstend"); // 이동할 페이지 경로 설정
+
+            setFade("fade-out"); // 페이드 아웃 시작
+
+            // 일정 시간이 지난 후 페이지 이동
+            setTimeout(() => {
+                navigate("/firstend");
+            }, 1000); // 1초 후 이동
         }
     };
 
     return (
-        <>
+        <div className={fade}>
             <hr className="vertical-hr" />
             <div id="main">
                 <div className="main01">
@@ -71,7 +78,7 @@ function Collect() {
                     <button type="submit" disabled={!inputValue.trim()}>기록하기</button>
                 </form>
             </div>
-        </>
+        </div>
     );
 }
 

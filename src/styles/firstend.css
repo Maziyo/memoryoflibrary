@@ -26,12 +26,6 @@ div {
     height: 100vh;            /* 화면 전체 높이 사용 */
 }
 
-img {
-    width: 20vw;
-    height: 20vw;
-
-    padding-bottom: 4vh;
-}
 
 #ment {
     padding-bottom: 10vh;

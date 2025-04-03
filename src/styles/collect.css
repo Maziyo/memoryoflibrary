@@ -167,3 +167,35 @@ hr {
 
     cursor: pointer;
 }
+
+/* 페이드 인 효과 */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* 페이드 아웃 효과 */
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 1s forwards;
+}
+
+/* 페이드 인 키프레임 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 페이드 아웃 키프레임 */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
