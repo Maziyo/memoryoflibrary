@@ -5,12 +5,10 @@ import QUESTIONS from "../assets/questions.jsx";
 import SAMPLES from "../assets/sampleansers.jsx";
 import websocketService from "../WebSocketService.js";
 
-let initialHeight = window.innerHeight;
 
-window.addEventListener("resize", () => {
-    if (window.innerHeight >= initialHeight) {
-        document.body.style.height = `${initialHeight}px`;
-    }
+
+document.addEventListener("focusout", () => {
+    window.scrollTo(0, 0);
 });
 
 
