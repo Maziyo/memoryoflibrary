@@ -27,7 +27,7 @@ body {
     /* 스크롤 방지 */
 }
 
-#main {
+#Nmain {
     width: 90%;
     height: 90vh;
 
@@ -36,20 +36,18 @@ body {
     justify-content: space-between;
 }
 
-.main01 {
-    width: 90%;
+#Nmain01 {
+    width: 100%;
     height: 36vh;
     box-sizing: border-box;
 }
 
-#main01-con {
-    width: 100%;
+#Nmain01-con {
+    width: 90%;
     height: 100%;
-
-    align-items: flex-start;
 }
 
-.recording {
+#Nrecording {
     width: 100%;
     font-size: 1.2rem;
     font-family: 'Pretendard-Regular';
@@ -67,11 +65,10 @@ hr {
     /* 부모 요소에 맞게 너비 설정 */
 }
 
-.question {
+#Nquestion {
     width: 100%;
     height: 20vh;
     /* 원하는 고정 높이 설정 */
-    margin-top: 2vh;
 
     justify-content: center;
     /* 가로 중앙 정렬 */
@@ -82,18 +79,16 @@ hr {
     font-weight: lighter;
 
     overflow: hidden;
-
-    white-space: pre-line;
 }
 
-#main02 {
+#Nmain02 {
     width: 100%;
     flex-grow: 1;
     /* 🔹 남은 공간을 전부 차지 */
     display: flex;
 }
 
-.userInput {
+#NuserInput {
     width: 90%;
     height: 100%;
 
@@ -104,7 +99,7 @@ hr {
     background-color: transparent;
     color: #CDCDCD;
     font-family: 'Pretendard-Regular';
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 
     outline: none;
     resize: none;
@@ -112,10 +107,10 @@ hr {
    
 }
 
-.userInput::placeholder {
+#NuserInput::placeholder {
     color: #5A5A5A;
     font-family: 'Pretendard-Regular';
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2.2rem;
     outline: none;
 }
@@ -141,7 +136,7 @@ hr {
     /* 정확한 중앙 정렬 */
 }
 
-.btn {
+#Nbtn {
     width: 100%;
     height: 10vh;
 
@@ -151,12 +146,12 @@ hr {
     z-index: 100;
 }
 
-.btn form {
+#Nbtn form {
     width: 100%;
     height: 100%;
 }
 
-.btn form button {
+#Nbtn form button {
     width: 100%;
     height: 100%;
 

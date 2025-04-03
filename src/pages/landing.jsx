@@ -11,7 +11,7 @@ function Landing() {
         const timer = setTimeout(() => {
             setFade("fade-out"); // 페이드 아웃 시작
             setTimeout(() => {
-                navigate("/collect"); // 페이지 이동
+                navigate("/name"); // 페이지 이동
             }, 1000); // 페이드 아웃 시간 후 이동
         }, 2000); // 3초 대기
 

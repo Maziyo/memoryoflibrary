@@ -9,7 +9,7 @@ function Firstend() {
         <>
             <div>
                 <img src={iconGif} alt="icon" />
-                <h1 id="ment">지금 당신이 꺼낸 기억은<br />한 편의 이야기로 이어질<br />준비를 하고 있어요.</h1>
+                <h1 id="ment">당신의 기억이 기록되었습니다.<br/>도서관에서 만나요.</h1>
             </div>
 
         </>
